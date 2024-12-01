@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
     Connection c;
     bool test = c.createConnection();
     gestiondefournisseur w;
-
     if (test)
     {
         w.show();

@@ -1,4 +1,3 @@
-
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
@@ -10,12 +9,11 @@
 class Connection
 {
     QSqlDatabase db;
-
 public:
-    Connection();  // Constructeur
-    bool createConnection();  // Méthode pour créer la connexion
-    void closeConnection();  // Méthode pour fermer la connexion
+    Connection();
+    bool createConnection();    // Create database connection
+    void closeConnection();     // Close database connection
+
 };
 
 #endif // CONNECTION_H
-

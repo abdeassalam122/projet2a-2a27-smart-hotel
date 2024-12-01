@@ -3,13 +3,16 @@
 
 #include <QString>
 #include <QSqlQueryModel>
+#include <QMap>
+#include <QObject>
 
 class Fournisseur
-{   int id;
+{
+   int id;
     QString Nom_F, Adresse, Email;
-
     QString Telephone;
     QString Secteur;
+
 
 public:
     Fournisseur();
@@ -35,6 +38,12 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int);
     bool modifier();
+    QSqlQueryModel* rechercherParSecteur(const QString& secteur);
+    QMap<QString, QMap<QString, double>> getStatistics();
+
+
+
 };
+
 
 #endif // FOURNISSEUR_H
